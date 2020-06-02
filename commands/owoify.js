@@ -22,7 +22,7 @@ exports.run = (message, args) => {
 }
 
 exports.meta = {
-    name:"owo-ify",
+    name:"owoify",
     description:"owo-ifies a message",
     usage:"please do not use this too much"
 }
