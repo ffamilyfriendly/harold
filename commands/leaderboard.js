@@ -7,7 +7,8 @@ exports.run = (message, args) => {
         .setTitle(`**Leaderboard**`)
     for(let i = 0; (i < 25 && i < list.length); i++) {
         if(!list[i]) continue; 
-        embed.addField(`**#${i+1}**`,`${message.client.users.cache.get(list[i].key).username} ${list[i].key == message.author.id ? "**(you)**" : ""} ${list[i].value.messages} messages`)
+        const user = message.client.users.cache.get(list[i].key)
+        embed.addField(`**#${i+1}**`,`${user ? user.username : `cannot find username (${list[i].key})`} ${list[i].key == message.author.id ? "**(you)**" : ""} ${list[i].value.messages} messages`)
     }
     message.channel.send(embed)
     
