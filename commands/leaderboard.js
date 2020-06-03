@@ -6,6 +6,7 @@ exports.run = (message, args) => {
         .setColor("yellow")
         .setTitle(`**Leaderboard**`)
     for(let i = 0; (i < 25 && i < list.length); i++) {
+        if(!list[i]) continue; 
         embed.addField(`**#${i+1}**`,`${message.client.users.cache.get(list[i].key).username} ${list[i].key == message.author.id ? "**(you)**" : ""} ${list[i].value.messages} messages`)
     }
     message.channel.send(embed)
