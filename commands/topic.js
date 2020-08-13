@@ -1,14 +1,14 @@
+const place = ["church", "funeral", "wedding", "birthday party", "graduation", "meeting with the president", "fast food resturant", "date"]
+const action = ["jumping out a window", "going fishing with the bois", "becoming an astronaut", "becoming a submarine"]
+
 const topic = [
-    "What was the last funny video you saw?",
-    "What three words best describe you?",
-    "What would be your perfect weekend?",
-    "What’s your favorite way to waste time?",
-    "What’s the best / worst thing about your work/school?",
-    "What makes harold so much better then gilbert?",
-    "What is the strangest dream you have ever had?",
-    "What hermitcraft season is your favorite and why?",
-    "When did you start playing minecraft",
-    "What weird or useless talent do you have?"
+    `what are some things you ${Math.random() < 0.5 ? "should" : "should not"} say at a ${place[Math.floor(Math.random() * place.length)]}?`,
+    `what do you have planned today?`,
+    `what is the best about ${place[Math.floor(Math.random() * place.length)]}?`,
+    `what do you do when bored?`,
+    `what is something you've never done that you want to try?`,
+    `have you ever though about ${action[Math.floor(Math.random() * action.length)]}`,
+    `what is your favorite movie/series?`
 ]
 
 const dsc = require("discord.js")
